@@ -43,7 +43,7 @@ async def fetch_a_user(user_id: UUID):
             return result
     raise HTTPException(
         status_code = 404,
-        detail = f"Sorry, the user with id: {user_id} does not exsist."
+        detail = f"Sorry, the user with id: {user_id} does not exist."
     )
 
 # Post request to add a new user
@@ -61,7 +61,7 @@ async def delete_user(user_id: UUID):
             return
     raise HTTPException(
         status_code = 404,
-        detail = f"Sorry, user with id: {user_id} does not exsits."
+        detail = f"Sorry, user with id: {user_id} does not exist."
     )
 
 # Update user
@@ -80,5 +80,5 @@ async def update_user(user_update: UpdateUserRequest, user_id: UUID):
             return user
     raise HTTPException(
         status_code = 404,
-        detail = f"Sorry, user with id: {user_id} does not exists."
+        detail = f"Sorry, user with id: {user_id} does not exist."
     )  
