@@ -34,6 +34,18 @@ async def root():
 async def fetch_users():
     return db;
 
+# Get request for a user
+@app.get("/users/{user_id}")
+async def fetch_a_user(user_id: UUID):
+    for user in db:
+        if user.id == user_id:
+            result = user
+            return result
+    raise HTTPException(
+        status_code = 404,
+        detail = f"Sorry, the user with id: {user_id} that you are looking does not exsist."
+    )
+
 # Post request to add a new user
 @app.post("/users")
 async def register_user(user: User):
@@ -49,7 +61,7 @@ async def delete_user(user_id: UUID):
             return
     raise HTTPException(
         status_code = 404,
-        detail = f"Sorry, user with id: {user_id} does not exsits"
+        detail = f"Sorry, user with id: {user_id} does not exsits."
     )
 
 # Update user
@@ -68,5 +80,5 @@ async def update_user(user_update: UpdateUserRequest, user_id: UUID):
             return user
     raise HTTPException(
         status_code = 404,
-        detail = f"Sorry, user with id: {user_id} does not exists"
+        detail = f"Sorry, user with id: {user_id} does not exists."
     )  
