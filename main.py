@@ -24,10 +24,18 @@ db: List[User] = [
     )
 ]
 
+# Home 
 @app.get("/")
 async def root():
     return {"Hello": "Khoa"}
 
+# Get request for users
 @app.get("/users")
 async def fetch_users():
     return db;
+
+# Post request to add a new user
+@app.post("/users")
+async def register_user(user: User):
+    db.append(user)
+    return {"id": user.id}
