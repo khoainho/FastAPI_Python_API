@@ -1,6 +1,8 @@
-# NewJeans API
+# NewJeans API 
 ## Description
 This is a Python API with full CRUD routes for storing NewJeans members' information.
+
+<img src="images/newjeans.png">
 
 ### Technologies 
 * Python
