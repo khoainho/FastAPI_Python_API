@@ -4,9 +4,9 @@ from uuid import UUID, uuid4
 from pydantic import BaseModel
 
 class Role(str, Enum):
-    student = "student"
-    admin = "admin"
-    user = "user"
+    member = "member"
+    maknae = "Maknae"
+    leader = "leader"
 
 class Gender(str, Enum):
     male = "male"
