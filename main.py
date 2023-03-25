@@ -43,7 +43,7 @@ async def fetch_a_user(user_id: UUID):
             return result
     raise HTTPException(
         status_code = 404,
-        detail = f"Sorry, the user with id: {user_id} that you are looking does not exsist."
+        detail = f"Sorry, the user with id: {user_id} does not exsist."
     )
 
 # Post request to add a new user
