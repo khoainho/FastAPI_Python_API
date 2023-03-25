@@ -4,13 +4,13 @@ from uuid import UUID, uuid4
 from pydantic import BaseModel
 
 class Role(str, Enum):
-    member = "member"
+    member = "Member"
     maknae = "Maknae"
-    leader = "leader"
+    leader = "Leader"
 
 class Gender(str, Enum):
-    male = "male"
-    female = "female"
+    male = "Male"
+    female = "Female"
 
 class User(BaseModel):
     id: Optional[UUID] = uuid4()
