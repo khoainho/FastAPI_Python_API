@@ -1,6 +1,7 @@
 # NewJeans API 
 ## Description
-This is a Python API with full CRUD routes for storing NewJeans members' information.
+
+This is a Python API with full CRUD routes for NewJeans member's data.
 
 <img src="images/newjeans.png">
 
@@ -12,7 +13,16 @@ This is a Python API with full CRUD routes for storing NewJeans members' informa
 * Pydantic
 
 ## Setup Instructions
-1. Clone repository to your local machine using SSH key
-2. CD into project folder and run the command ```pip3 install fastapi "uvicorn[standard]"``` to isntall all of the necessary packages
-3. Run the command ```uvicorn main:app --reload``` to run the API on your local machine
-4. Open Postman or browser of your choice and go to ```http://localhost:8000/members``` to get started
+1. Clone the repository to your local machine
+2. CD into the project folder and run the command to install all of the necessary packages
+```python
+pip3 install fastapi "uvicorn[standard]"
+```
+4. Run the command to run the API on your local machine
+```python
+uvicorn main:app --reload
+```
+6. Open Postman or the browser of your choice and go to to get started
+```python
+http://localhost:8000/members
+```
